@@ -18,4 +18,8 @@ def plot_data(x, y):
 
     # ===========================================================
 
-    plt.figure()  # open a new figure window
+    plt.scatter(x, y, c='r', marker="x")
+    plt.xlabel('population')
+    plt.ylabel('profit')
+
+    plt.show()  # open a new figure window

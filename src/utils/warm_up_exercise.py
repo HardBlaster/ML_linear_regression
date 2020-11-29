@@ -1,3 +1,6 @@
+import numpy as np
+
+
 # WARMUPEXERCISE Example function in octave
 #   A = WARMUPEXERCISE() is an example function that returns the 5x5 identity matrix
 
@@ -10,6 +13,7 @@ def warm_up_exercise():
     #               declared before returning it.
 
     # ===========================================
+    A = np.identity(5)
 
     print(A)
     return A

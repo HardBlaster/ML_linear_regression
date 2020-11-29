@@ -104,6 +104,10 @@ print(f'{theta}\n\n')
 # not need to be normalized.
 price = 0  # You should change this
 
+predict = np.array([1650, 3])
+predict = (predict - mu) / sigma
+predict = np.r_[(1, predict)]
+price = np.dot(predict, theta)
 
 # ==========================================================
 
@@ -141,6 +145,8 @@ print(f'{theta}\n\n')
 # ===================== Your Code Here =====================
 price = 0  # You should change this
 
+predict = np.array([1, 1650, 3])
+price = np.dot(predict, theta)
 
 # ==========================================================
 

@@ -13,4 +13,7 @@ def normal_eqn(X, y):
     #               to linear regression and put the result in theta.
     #
 
+    Xt = np.transpose(X)
+    theta = np.linalg.pinv(Xt.dot(X)).dot(Xt).dot(y)
+
     return theta

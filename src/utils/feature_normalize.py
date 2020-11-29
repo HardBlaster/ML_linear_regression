@@ -30,4 +30,8 @@ def feature_normalize(X):
     # Hint: You might find the 'np.mean' and 'np.std' functions useful.
     #       np.std(X, 0, ddof=1) <==> std in Octave
 
+    mu = np.mean(X, 0)
+    sigma = np.std(X, 0, ddof=1)
+    X_norm = (X - mu) / sigma
+
     return X_norm, mu, sigma

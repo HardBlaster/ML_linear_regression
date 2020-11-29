@@ -19,6 +19,10 @@ def gradient_descent_multi(X, y, theta, alpha, num_iters):
         #
         # Hint: While debugging, it can be useful to print out the values
         #       of the cost function (computeCostMulti) and gradient here.
+
+        error = np.dot(X, theta).flatten() - y
+        theta -= (alpha / m) * np.sum(X * error[:, np.newaxis], 0)
+
         J_history[i] = compute_cost(X, y, theta)    # save the cost
 
     return theta, J_history
